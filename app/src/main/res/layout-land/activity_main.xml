@@ -13,7 +13,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@+id/TopLinearLayout"
+        android:id="@+id/TopLayout"
         android:layout_weight=".75"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
