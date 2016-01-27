@@ -7,7 +7,7 @@
     tools:context="com.example.jacob.boggle.MainActivity"
     android:orientation="vertical"
     android:background="@mipmap/backgorund"
-    android:id="@+id/appLayout">
+    android:id="@+id/AppLayout">
 
     <LinearLayout
         android:orientation="horizontal"
