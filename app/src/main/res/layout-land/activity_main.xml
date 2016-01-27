@@ -6,7 +6,8 @@
 
     tools:context="com.example.jacob.boggle.MainActivity"
     android:orientation="vertical"
-    android:background="@mipmap/backgorund">
+    android:background="@mipmap/backgorund"
+    android:id="@+id/appLayout">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -35,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="00"
-            android:id="@+id/textView"
+            android:id="@+id/yourScoreNumberTextView"
             android:textIsSelectable="true"
             android:textSize="24sp"
             android:layout_weight="4"
@@ -47,7 +48,7 @@
         <Chronometer
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/chronometer"
+            android:id="@+id/Timer"
             android:textSize="40sp"
             android:layout_weight="25"
             android:textAlignment="center"
@@ -59,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Opponent Score:"
-            android:id="@+id/textView3"
+            android:id="@+id/OpponentScoreTitleTextView"
             android:textSize="24sp"
             android:layout_weight="1"
             android:textAlignment="center"
@@ -71,13 +72,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="00"
-            android:id="@+id/textView4"
             android:textSize="24sp"
             android:layout_weight="1"
             android:textColor="#100c00"
             android:textStyle="bold"
             android:typeface="sans"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:id="@+id/opponentScoreNumberTextView" />
 
     </LinearLayout>
 
@@ -103,7 +104,8 @@
             android:textAlignment="gravity"
             android:layout_weight="2"
             android:gravity="top|center_horizontal"
-            android:textIsSelectable="true" />
+            android:textIsSelectable="true"
+            android:id="@+id/TitleTextView" />
     </LinearLayout>
 
     <LinearLayout
@@ -127,7 +129,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="G"
-                android:id="@+id/button4"
+                android:id="@+id/tile1Button"
                 android:background="@mipmap/wood1"
                 android:textSize="55sp"
                 android:textAlignment="center"
@@ -136,7 +138,7 @@
             <Button
                 android:layout_width="85dp"
                 android:layout_height="85dp"
-                android:id="@+id/button5"
+                android:id="@+id/tile2Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -147,7 +149,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="P"
-                android:id="@+id/button6"
+                android:id="@+id/tile3Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -157,7 +159,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="E"
-                android:id="@+id/button7"
+                android:id="@+id/tile4Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -173,7 +175,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="O"
-                android:id="@+id/button"
+                android:id="@+id/tile5Button"
                 android:adjustViewBounds="false"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
@@ -184,18 +186,18 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="K"
-                android:id="@+id/button2"
                 android:layout_gravity="left"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:id="@+id/tile6Button" />
 
             <Button
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="U"
-                android:id="@+id/button3"
+                android:id="@+id/tile7Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -205,7 +207,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="G"
-                android:id="@+id/button8"
+                android:id="@+id/tile8Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -221,7 +223,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="R"
-                android:id="@+id/button9"
+                android:id="@+id/tile9Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -231,7 +233,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="A"
-                android:id="@+id/button10"
+                android:id="@+id/tile10Button"
                 android:layout_gravity="left|bottom"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
@@ -242,7 +244,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="T"
-                android:id="@+id/button11"
+                android:id="@+id/tile11Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -252,7 +254,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="Qu"
-                android:id="@+id/button12"
+                android:id="@+id/tile12Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -268,7 +270,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="L"
-                android:id="@+id/button14"
+                android:id="@+id/tile13Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -277,7 +279,7 @@
             <Button
                 android:layout_width="85dp"
                 android:layout_height="85dp"
-                android:id="@+id/button15"
+                android:id="@+id/tile14Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -288,7 +290,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="N"
-                android:id="@+id/button16"
+                android:id="@+id/tile15Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -298,7 +300,7 @@
                 android:layout_width="85dp"
                 android:layout_height="85dp"
                 android:text="B"
-                android:id="@+id/button17"
+                android:id="@+id/tile16Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="55sp"
@@ -316,17 +318,18 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:id="@+id/BottemLayout"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
-        android:paddingBottom="20dp">
+        android:paddingBottom="20dp"
+        android:layout_marginTop="10dp">
 
         <Button
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:text="Sumbit Score"
-            android:id="@+id/button18"
+            android:id="@+id/SumbitScoreButton"
             android:layout_weight="1"
             android:layout_gravity="center" />
 
@@ -337,8 +340,8 @@
 
         <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/scrollView"
+            android:layout_height="94dp"
+            android:id="@+id/wordBankScrollView"
             android:fillViewport="false"
             android:foreground="#f3cbcb"
             android:layout_weight="3"
@@ -351,17 +354,19 @@
             android:layout_height="20px"
             android:layout_weight=".75" />
 
-        <ImageButton
+        <Button
             android:layout_width="50dp"
             android:layout_height="60dp"
-            android:id="@+id/imageButton2"
-            android:layout_weight=".5" />
+            android:layout_weight=".5"
+            android:id="@+id/rotateBackwardButton"
+            android:text="Rotate Left" />
 
-        <ImageButton
+        <Button
             android:layout_width="50dp"
             android:layout_height="60dp"
-            android:id="@+id/imageButton"
-            android:layout_weight=".5"/>
+            android:id="@+id/rotateForwardButton"
+            android:layout_weight=".5"
+            android:text="Rotate Right " />
 
 
     </LinearLayout>

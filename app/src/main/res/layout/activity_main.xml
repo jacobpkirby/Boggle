@@ -6,7 +6,8 @@
 
     tools:context="com.example.jacob.boggle.MainActivity"
     android:orientation="vertical"
-    android:background="@mipmap/backgorund">
+    android:background="@mipmap/backgorund"
+    android:id="@+id/AppLayout">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -35,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="00"
-            android:id="@+id/textView"
+            android:id="@+id/YourScoreNumberTextView"
             android:textIsSelectable="true"
             android:textSize="24sp"
             android:layout_weight="4"
@@ -47,37 +48,38 @@
         <Chronometer
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/chronometer"
+            android:id="@+id/Timer"
             android:textSize="40sp"
             android:layout_weight="25"
             android:textAlignment="center"
             android:textColor="#100c00"
             android:textStyle="bold"
-            android:typeface="sans" />
+            android:typeface="sans"
+            android:text="Timer" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Opponent Score:"
-            android:id="@+id/textView3"
             android:textSize="24sp"
             android:layout_weight="1"
             android:textAlignment="center"
             android:textColor="#100c00"
             android:textStyle="bold"
-            android:typeface="sans" />
+            android:typeface="sans"
+            android:id="@+id/opponentScoreTitleTextView" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="00"
-            android:id="@+id/textView4"
             android:textSize="24sp"
             android:layout_weight="1"
             android:textColor="#100c00"
             android:textStyle="bold"
             android:typeface="sans"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:id="@+id/opponentScoreNumberTextView" />
 
     </LinearLayout>
 
@@ -103,7 +105,8 @@
             android:textAlignment="gravity"
             android:layout_weight="2"
             android:gravity="top|center_horizontal"
-            android:textIsSelectable="true" />
+            android:textIsSelectable="true"
+            android:id="@+id/titleTextView" />
     </LinearLayout>
 
     <LinearLayout
@@ -127,7 +130,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="G"
-                android:id="@+id/button4"
+                android:id="@+id/tile1Button"
                 android:background="@mipmap/wood1"
                 android:textSize="65sp"
                 android:textAlignment="center"
@@ -136,7 +139,7 @@
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/button5"
+                android:id="@+id/tile2Button"
                 android:background="@mipmap/wood1"
                 android:textSize="65sp"
                 android:text="F"
@@ -147,7 +150,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="P"
-                android:id="@+id/button6"
+                android:id="@+id/tile3Button"
                 android:background="@mipmap/wood1"
                 android:textSize="65sp"
                 android:textAlignment="center"
@@ -157,7 +160,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="E"
-                android:id="@+id/button7"
+                android:id="@+id/tile4Button"
                 android:background="@mipmap/wood1"
                 android:textSize="65sp"
                 android:textAlignment="center"
@@ -173,18 +176,18 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="O"
-                android:id="@+id/button"
                 android:adjustViewBounds="false"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:id="@+id/title5Button" />
 
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="K"
-                android:id="@+id/button2"
+                android:id="@+id/tile6Button"
                 android:layout_gravity="left"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
@@ -195,7 +198,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="U"
-                android:id="@+id/button3"
+                android:id="@+id/tile7Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
@@ -205,7 +208,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="G"
-                android:id="@+id/button8"
+                android:id="@+id/title8Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
@@ -221,7 +224,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="R"
-                android:id="@+id/button9"
+                android:id="@+id/tile9Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
@@ -231,7 +234,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="A"
-                android:id="@+id/button10"
+                android:id="@+id/tile10Button"
                 android:layout_gravity="left|bottom"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
@@ -242,7 +245,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="T"
-                android:id="@+id/button11"
+                android:id="@+id/tile11Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
@@ -252,7 +255,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="Qu"
-                android:id="@+id/button12"
+                android:id="@+id/tile12Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
@@ -268,7 +271,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="L"
-                android:id="@+id/button14"
+                android:id="@+id/tile13Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
@@ -277,7 +280,7 @@
             <Button
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:id="@+id/button15"
+                android:id="@+id/tile14Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
@@ -288,7 +291,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="N"
-                android:id="@+id/button16"
+                android:id="@+id/tile15Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
@@ -298,7 +301,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="B"
-                android:id="@+id/button17"
+                android:id="@+id/tile16Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
@@ -326,7 +329,7 @@
             android:layout_width="100dp"
             android:layout_height="75dp"
             android:text="Sumbit Score"
-            android:id="@+id/button18"
+            android:id="@+id/SumbitScoreButton"
             android:layout_weight="1"
             android:layout_gravity="center" />
 
@@ -338,7 +341,7 @@
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:id="@+id/scrollView"
+            android:id="@+id/WordBankScrollView"
             android:fillViewport="true"
             android:foreground="#f3cbcb"
             android:layout_weight="5">
@@ -350,19 +353,21 @@
             android:layout_height="20px"
             android:layout_weight="1" />
 
-        <ImageButton
+        <Button
             android:layout_width="50dp"
             android:layout_height="60dp"
-            android:id="@+id/imageButton2"
+            android:id="@+id/RotateBackwardButton"
             android:layout_weight=".5"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:text="Rotate Left" />
 
-        <ImageButton
+        <Button
             android:layout_width="50dp"
             android:layout_height="60dp"
-            android:id="@+id/imageButton"
+            android:id="@+id/RotateForwardButton"
             android:layout_weight=".5"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:text="Rotate Right" />
 
     </LinearLayout>
 
