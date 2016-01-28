@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/TopLayout"
-        android:layout_weight=".75"
+        android:layout_weight="1.19"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:paddingTop="25dp">
@@ -85,27 +85,26 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="89dp"
         android:textAlignment="center"
         android:id="@+id/TitleLayout">
 
         <TextView android:textColor="#2d0606"
             android:layout_width="0dp"
             android:text="Boggle"
-            android:layout_height="91dp"
+            android:layout_height="wrap_content"
             android:shadowColor="#fbc3c3"
             android:shadowDx="15"
             android:shadowDy="-10"
             android:shadowRadius="3"
-            android:textSize="65sp"
+            android:textSize="60sp"
             android:textStyle="bold|italic"
             android:typeface="sans"
             android:textAlignment="gravity"
-            android:layout_weight="2"
             android:gravity="top|center_horizontal"
             android:textIsSelectable="true"
-            android:id="@+id/TitleTextView" />
+            android:id="@+id/TitleTextView"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -113,12 +112,26 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/MainLayout"
-        android:layout_weight="4">
+        android:layout_weight="4.55">
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/wordBankScrollView"
+                android:fillViewport="false"
+                android:foreground="#f3cbcb"
+                android:background="#526f9a"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+
+            </ScrollView>
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
@@ -126,8 +139,8 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="G"
                 android:id="@+id/tile1Button"
                 android:background="@mipmap/wood1"
@@ -136,8 +149,8 @@
                 android:layout_margin="1dp" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:id="@+id/tile2Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
@@ -146,8 +159,8 @@
                 android:textAlignment="center" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="P"
                 android:id="@+id/tile3Button"
                 android:background="@mipmap/wood1"
@@ -156,8 +169,8 @@
                 android:textAlignment="center" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="E"
                 android:id="@+id/tile4Button"
                 android:background="@mipmap/wood1"
@@ -172,8 +185,8 @@
             android:layout_height="match_parent">
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="O"
                 android:id="@+id/tile5Button"
                 android:adjustViewBounds="false"
@@ -183,8 +196,8 @@
                 android:textAlignment="center" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="K"
                 android:layout_gravity="left"
                 android:background="@mipmap/wood1"
@@ -194,8 +207,8 @@
                 android:id="@+id/tile6Button" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="U"
                 android:id="@+id/tile7Button"
                 android:background="@mipmap/wood1"
@@ -204,8 +217,8 @@
                 android:textAlignment="center" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="G"
                 android:id="@+id/tile8Button"
                 android:background="@mipmap/wood1"
@@ -220,8 +233,8 @@
             android:layout_height="match_parent">
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="R"
                 android:id="@+id/tile9Button"
                 android:background="@mipmap/wood1"
@@ -230,8 +243,8 @@
                 android:textAlignment="center" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="A"
                 android:id="@+id/tile10Button"
                 android:layout_gravity="left|bottom"
@@ -241,8 +254,8 @@
                 android:textAlignment="center" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="T"
                 android:id="@+id/tile11Button"
                 android:background="@mipmap/wood1"
@@ -251,8 +264,8 @@
                 android:textAlignment="center" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="Qu"
                 android:id="@+id/tile12Button"
                 android:background="@mipmap/wood1"
@@ -267,8 +280,8 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="L"
                 android:id="@+id/tile13Button"
                 android:background="@mipmap/wood1"
@@ -277,8 +290,8 @@
                 android:textAlignment="center" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:id="@+id/tile14Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
@@ -287,8 +300,8 @@
                 android:textAlignment="center" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="N"
                 android:id="@+id/tile15Button"
                 android:background="@mipmap/wood1"
@@ -297,8 +310,8 @@
                 android:textAlignment="center" />
 
             <Button
-                android:layout_width="85dp"
-                android:layout_height="85dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:text="B"
                 android:id="@+id/tile16Button"
                 android:background="@mipmap/wood1"
@@ -326,33 +339,37 @@
         android:layout_marginTop="10dp">
 
         <Button
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:text="Sumbit Score"
             android:id="@+id/SumbitScoreButton"
-            android:layout_weight="1"
+            android:layout_weight=".5"
             android:layout_gravity="center" />
 
-        <Space
-            android:layout_width="20px"
-            android:layout_height="20px"
-            android:layout_weight=".75" />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="Submit Word"
+            android:id="@+id/sumbitWordButton"
+            android:layout_weight=".5"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp" />
 
-        <ScrollView
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="94dp"
-            android:id="@+id/wordBankScrollView"
-            android:fillViewport="false"
-            android:foreground="#f3cbcb"
-            android:layout_weight="3"
-            android:background="#526f9a">
-
-        </ScrollView>
+            android:layout_height="fill_parent"
+            android:text="This is where the letters go"
+            android:id="@+id/letterDisplayTextView"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textSize="26sp"
+            android:textAlignment="center"
+            android:padding="5dp" />
 
         <Space
             android:layout_width="20px"
             android:layout_height="20px"
-            android:layout_weight=".75" />
+            android:layout_weight=".5" />
 
         <Button
             android:layout_width="50dp"
