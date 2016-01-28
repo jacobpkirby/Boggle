@@ -208,7 +208,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:text="G"
-                android:id="@+id/title8Button"
+                android:id="@+id/tile8Button"
                 android:background="@mipmap/wood1"
                 android:layout_margin="1dp"
                 android:textSize="65sp"
